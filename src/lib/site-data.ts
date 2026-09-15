@@ -247,7 +247,7 @@ export const catalogs = [
     href: "/spinning",
     cta: "View the portfolio",
   },
-];
+] as const;
 
 export const companyInfo = {
   registration: "0015744",
