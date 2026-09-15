@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CompanyInformationRouteImport } from './routes/company-information'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ECatalogRouteImport } from './routes/e-catalog'
+import { Route as InitiativeRouteImport } from './routes/initiative'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as SocksRouteImport } from './routes/socks'
+import { Route as SpinningRouteImport } from './routes/spinning'
+import { Route as SustainabilityRouteImport } from './routes/sustainability'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyInformationRoute = CompanyInformationRouteImport.update({
+  id: '/company-information',
+  path: '/company-information',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ECatalogRoute = ECatalogRouteImport.update({
+  id: '/e-catalog',
+  path: '/e-catalog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InitiativeRoute = InitiativeRouteImport.update({
+  id: '/initiative',
+  path: '/initiative',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SocksRoute = SocksRouteImport.update({
+  id: '/socks',
+  path: '/socks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SpinningRoute = SpinningRouteImport.update({
+  id: '/spinning',
+  path: '/spinning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SustainabilityRoute = SustainabilityRouteImport.update({
+  id: '/sustainability',
+  path: '/sustainability',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/company-information': typeof CompanyInformationRoute
+  '/contact': typeof ContactRoute
+  '/e-catalog': typeof ECatalogRoute
+  '/initiative': typeof InitiativeRoute
+  '/reports': typeof ReportsRoute
+  '/socks': typeof SocksRoute
+  '/spinning': typeof SpinningRoute
+  '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/company-information': typeof CompanyInformationRoute
+  '/contact': typeof ContactRoute
+  '/e-catalog': typeof ECatalogRoute
+  '/initiative': typeof InitiativeRoute
+  '/reports': typeof ReportsRoute
+  '/socks': typeof SocksRoute
+  '/spinning': typeof SpinningRoute
+  '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/company-information': typeof CompanyInformationRoute
+  '/contact': typeof ContactRoute
+  '/e-catalog': typeof ECatalogRoute
+  '/initiative': typeof InitiativeRoute
+  '/reports': typeof ReportsRoute
+  '/socks': typeof SocksRoute
+  '/spinning': typeof SpinningRoute
+  '/sustainability': typeof SustainabilityRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/company-information'
+    | '/contact'
+    | '/e-catalog'
+    | '/initiative'
+    | '/reports'
+    | '/socks'
+    | '/spinning'
+    | '/sustainability'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/company-information'
+    | '/contact'
+    | '/e-catalog'
+    | '/initiative'
+    | '/reports'
+    | '/socks'
+    | '/spinning'
+    | '/sustainability'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/company-information'
+    | '/contact'
+    | '/e-catalog'
+    | '/initiative'
+    | '/reports'
+    | '/socks'
+    | '/spinning'
+    | '/sustainability'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CompanyInformationRoute: typeof CompanyInformationRoute
+  ContactRoute: typeof ContactRoute
+  ECatalogRoute: typeof ECatalogRoute
+  InitiativeRoute: typeof InitiativeRoute
+  ReportsRoute: typeof ReportsRoute
+  SocksRoute: typeof SocksRoute
+  SpinningRoute: typeof SpinningRoute
+  SustainabilityRoute: typeof SustainabilityRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-information': {
+      id: '/company-information'
+      path: '/company-information'
+      fullPath: '/company-information'
+      preLoaderRoute: typeof CompanyInformationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/e-catalog': {
+      id: '/e-catalog'
+      path: '/e-catalog'
+      fullPath: '/e-catalog'
+      preLoaderRoute: typeof ECatalogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/initiative': {
+      id: '/initiative'
+      path: '/initiative'
+      fullPath: '/initiative'
+      preLoaderRoute: typeof InitiativeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/socks': {
+      id: '/socks'
+      path: '/socks'
+      fullPath: '/socks'
+      preLoaderRoute: typeof SocksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/spinning': {
+      id: '/spinning'
+      path: '/spinning'
+      fullPath: '/spinning'
+      preLoaderRoute: typeof SpinningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sustainability': {
+      id: '/sustainability'
+      path: '/sustainability'
+      fullPath: '/sustainability'
+      preLoaderRoute: typeof SustainabilityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CompanyInformationRoute: CompanyInformationRoute,
+  ContactRoute: ContactRoute,
+  ECatalogRoute: ECatalogRoute,
+  InitiativeRoute: InitiativeRoute,
+  ReportsRoute: ReportsRoute,
+  SocksRoute: SocksRoute,
+  SpinningRoute: SpinningRoute,
+  SustainabilityRoute: SustainabilityRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
